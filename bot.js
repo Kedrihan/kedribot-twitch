@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const tmi = require('tmi.js');
-const func = require('includes/functions.js');
+const func = require('./includes/functions.js');
 // Get authentication data
 let AuthDetails = require("./includes/auth.json");
 let pendu = require("./pendu.js");
