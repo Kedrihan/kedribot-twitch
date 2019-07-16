@@ -1,7 +1,8 @@
 #!/usr/bin/node
 const tmi = require('tmi.js');
+const func = require('includes/functions.js');
 // Get authentication data
-let AuthDetails = require("./auth.json");
+let AuthDetails = require("./includes/auth.json");
 let pendu = require("./pendu.js");
 // Valid commands start with:
 let commandPrefix = '!';
@@ -71,6 +72,7 @@ try {
     if (self || context['message-type'] === 'whisper') {
         return;
     }
+    func.addToDb(msg, context);
 	if((msg.toLowerCase().includes('kedribot') || msg.toLowerCase().includes('@kedribot')) && msg.toLowerCase().includes('est beau')) {
 		client.say(target, "Merci "+context.username+", toi aussi <3 <3 ")
     }
