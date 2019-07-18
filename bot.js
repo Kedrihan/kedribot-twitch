@@ -31,7 +31,7 @@ function sendWhisp(username, context, message) {
 // Create a client with our options:
 let client = new tmi.client(opts);
 
-let banWords = ["fdp","pute","salope ","bite","connard","connasse","couille","encul","baise","cock","fuck","rape","whore","cunt","bitch","pussy","boobs", "nude", " ass ", "grill"]
+let banWords = ["fdp"," pute","salope ","bite","connard","connasse","couille","encul","baise","cock","fuck","rape","whore","cunt","bitch","pussy","boobs", "nude", " ass ", "grill"]
 
 // Register our event handlers (defined below):
 var CooldownManager = {
