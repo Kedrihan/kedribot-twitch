@@ -31,8 +31,6 @@ function sendWhisp(username, context, message) {
 // Create a client with our options:
 let client = new tmi.client(opts);
 
-let banWords = ["fdp"," pute","salope ","bite","connard","connasse","couille","encul","baise","cock","fuck","rape","whore","cunt","bitch","pussy","boobs", "nude", " ass ", "grill"]
-
 // Register our event handlers (defined below):
 var CooldownManager = {
     cooldownTime: 8000, // 8 seconds
@@ -77,11 +75,7 @@ try {
 	if((msg.toLowerCase().includes('kedribot') || msg.toLowerCase().includes('@kedribot')) && msg.toLowerCase().includes('est beau')) {
 		client.say(target, "Merci "+context.username+", toi aussi <3 <3 ")
     }
-	banWords.forEach((word) => {
-		if(msg.toLowerCase().includes(word)) {
-			client.say(target, "/timeout "+context.username+" 300");
-		}
-	});
+	
 
     if((msg.toLowerCase().includes('kedribot') || msg.toLowerCase().includes('@kedribot')) && (msg.toLowerCase().includes('est moche') || msg.toLowerCase().includes('est laid'))) {
 		client.say(target, "Reste polis et courtois "+context.username+", sinon le ban sera pour toi. PunOko")
