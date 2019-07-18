@@ -77,8 +77,8 @@ try {
 	if((msg.toLowerCase().includes('kedribot') || msg.toLowerCase().includes('@kedribot')) && msg.toLowerCase().includes('est beau')) {
 		client.say(target, "Merci "+context.username+", toi aussi <3 <3 ")
     }
-	banWords.forEach(word => {
-		if(msg.toLowerCase().indexOf(word) !== -1) {
+	banWords.forEach((word) => {
+		if(msg.toLowerCase().includes(word)) {
 			client.say("/timeout "+context.username+" 1800");
 		}
 	});
