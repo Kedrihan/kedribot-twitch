@@ -79,7 +79,7 @@ try {
     }
 	banWords.forEach((word) => {
 		if(msg.toLowerCase().includes(word)) {
-			client.say("/timeout "+context.username+" 1800");
+			client.say(target, "/timeout "+context.username+" 1800");
 		}
 	});
 
